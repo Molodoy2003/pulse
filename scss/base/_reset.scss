@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+
+input, button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+input:focus, button:focus {
+    outline: none;
+}
+button {
+	cursor: pointer;
+	background: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+
+img {
+	vertical-align: top;
+	display: block;
+	max-width: 100%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.hidden {
+	display: none;
+}
+
+
