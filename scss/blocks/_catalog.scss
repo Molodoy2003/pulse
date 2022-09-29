@@ -42,19 +42,24 @@
     }
 }
 .catalog__body {
-    display: flex;
+    display: block;
     padding-top: 57px;
 }
 .catalog__content {
     display: flex;
+    flex-wrap: wrap;
+    display: none;
+    &-active {
+        display: flex;
+    }
 }
-.catalog__item {
+.catalog-item {
     display: block;
-    flex: 1 1 33.333%;
+    flex: 0 0 33.333%;
     width: 303px;
     background: #FFFFFF;
     border: 2px solid #E8E8E8;
-    margin-right: 18px;
+    margin-bottom: 20px;
     &:nth-child(3) {
         margin-right: 0px;
     }
@@ -128,4 +133,68 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.catalog-item {
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 40px);
+    }
+    &__content {
+        width: 50%;
+        margin-right: 0px;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &-active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+    &__list {
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        margin-bottom: 0;
+        position: relative;
+        &-active {
+            transform: translateX(-100%);
+            margin-left: 0px;
+        }
+        li {
+            position: relative;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            color: #555555;
+            margin-bottom: 20px;
+            &:nth-child(1) {
+                margin-top: 15px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color:  #C70101;
+                left: -14px;
+                top: 7px;
+            }
+        }
+    }
+    &-back {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(-50% - 19px));
+        display: block;
+        color: #C70101;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
 }

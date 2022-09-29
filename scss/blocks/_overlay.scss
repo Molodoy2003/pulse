@@ -1,0 +1,54 @@
+.overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.56);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 382px;
+    min-height: 402px;
+    background: #F2F2F2;
+    padding: 35px 40px 40px 40px;
+
+    &-mini {
+        min-height: 140px;
+    }
+}
+.modal__close {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    font-size: 41px;
+    line-height: 21px;
+    color:#C70101;
+    cursor: pointer;
+}
+.modal__title {
+    font-weight: 700;
+    font-size: 19px;
+    text-align: center;
+    color: #0D0D0D;
+    padding-bottom: 10px;
+}
+.modal__descr {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    color: #0D0D0D;
+    padding-bottom: 26px;
+}
+.feed-form {
+}
+.button {
+}
+
+#consultation, #order, #thanks {
+    display: none;
+}
